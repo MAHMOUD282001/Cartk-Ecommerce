@@ -18,15 +18,14 @@ function TopRatingsProductsLogic() {
   };
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     getProducts();
   }, []);
 
   let topRatingsProducts = useSelector(allProducts);
   let topRatingsProductsStatus = useSelector(allProductsStatus);
   let topRatingsProductsError = useSelector(allProductsError);
-  
-  
+
   return [
     topRatingsProducts,
     topRatingsProductsStatus,

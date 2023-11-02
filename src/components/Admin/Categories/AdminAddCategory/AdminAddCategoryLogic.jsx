@@ -35,8 +35,7 @@ function AddCategoryHook() {
       setSelectedFile(e.target.files[0]);
     }
   };
-  
-  
+
   //Handle Submit
   let handleCategorySubmit = (e) => {
     e.preventDefault();
@@ -55,7 +54,7 @@ function AddCategoryHook() {
   };
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {

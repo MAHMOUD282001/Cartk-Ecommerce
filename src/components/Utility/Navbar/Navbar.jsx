@@ -1,5 +1,5 @@
 import { Box, Menu, MenuItem, Stack, Typography } from "@mui/material";
-import logo from "../../../assets/Logo-2.png";
+import logo from "../../../assets/logo-2.png";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";

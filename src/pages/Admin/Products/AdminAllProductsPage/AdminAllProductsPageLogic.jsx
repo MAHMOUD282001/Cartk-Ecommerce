@@ -16,7 +16,7 @@ function AdminAllProductsPageLogic() {
 
   let dispatch = useDispatch();
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getAllProducts(10));
   }, []);
 

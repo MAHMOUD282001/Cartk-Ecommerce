@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   getAllCategories,
   getCategoriesPage,
-} from "../../store/thunkFunctions/categoriesFunctions";
+} from "../../store/ThunkFunctions/CategoriesFunctions";
 import {
   allCategories,
   allCategoriesStatus,
@@ -15,7 +15,7 @@ function AllCategoryPageLogic() {
 
   let dispatch = useDispatch();
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getAllCategories(10));
   }, []);
 
@@ -24,7 +24,7 @@ function AllCategoryPageLogic() {
 
   let getPage = (page) => {
     setPage(page);
-    dispatch(getCategoriesPage({page, limit: 10}));
+    dispatch(getCategoriesPage({ page, limit: 10 }));
   };
 
   return [categories, categoriesStatus, page, getPage];

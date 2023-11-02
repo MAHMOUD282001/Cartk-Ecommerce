@@ -19,7 +19,7 @@ function UserAllAddressesHook() {
   let allAddressesError = useSelector(addressesError);
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getAllAddresses());
     setLoading(false);
   }, []);

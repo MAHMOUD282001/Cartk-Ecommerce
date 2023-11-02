@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllCategories } from "../../../store/thunkFunctions/categoriesFunctions";
-import { getAllBrands } from "../../../store/thunkFunctions/brandsFunctions";
+import { getAllCategories } from "../../../store/ThunkFunctions/CategoriesFunctions";
+import { getAllBrands } from "../../../store/ThunkFunctions/BrandsFunctions";
 import { allBrands, allBrandsStatus } from "../../../store/BrandsSlice";
 import {
   allCategories,

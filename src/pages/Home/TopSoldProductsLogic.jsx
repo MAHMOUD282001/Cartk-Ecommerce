@@ -17,14 +17,14 @@ function TopSoldProductsLogic() {
   };
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     getProducts();
   }, []);
 
   let topSoldProducts = useSelector(allProducts);
   let topSoldProductsStatus = useSelector(allProductsStatus);
   let topSoldProductsError = useSelector(allProductsError);
-  
+
   return [topSoldProducts, topSoldProductsStatus, topSoldProductsError];
 }
 

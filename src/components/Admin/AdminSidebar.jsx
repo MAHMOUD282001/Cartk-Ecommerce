@@ -128,7 +128,7 @@ export default function AdminSidebar() {
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
                 bgcolor:
-                  location.pathname === dashboardItem.path ? grey[200] : "",
+                  window.location.pathname === dashboardItem.path ? grey[200] : "",
               }}
             >
               <ListItemIcon
@@ -159,7 +159,7 @@ export default function AdminSidebar() {
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
                 bgcolor:
-                  location.pathname === dashboardItem.path ? grey[200] : "",
+                window.location.pathname === dashboardItem.path ? grey[200] : "",
               }}
             >
               <ListItemIcon

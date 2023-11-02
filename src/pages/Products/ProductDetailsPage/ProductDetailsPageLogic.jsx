@@ -15,7 +15,7 @@ import {
 function ProductDetailsHook(id) {
   let dispatch = useDispatch();
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getSpecificProduct(id));
   }, [id]);
 
@@ -24,7 +24,12 @@ function ProductDetailsHook(id) {
 
   useEffect(() => {
     product?.data?.category !== undefined
-      ? dispatch(getSpecificProductsByCategory({id: product?.data?.category, limit: 5}))
+      ? dispatch(
+          getSpecificProductsByCategory({
+            id: product?.data?.category,
+            limit: 5,
+          })
+        )
       : "";
   }, [product]);
 

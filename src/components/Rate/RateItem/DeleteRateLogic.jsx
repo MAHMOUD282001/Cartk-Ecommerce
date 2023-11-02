@@ -49,7 +49,7 @@ function DeleteRateLogic() {
   };
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {

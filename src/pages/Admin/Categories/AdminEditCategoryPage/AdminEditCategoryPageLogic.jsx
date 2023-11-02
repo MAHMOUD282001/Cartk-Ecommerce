@@ -21,8 +21,8 @@ function AdminEditCategoryPageLogic(id) {
   let [img, setImg] = useState(uploadImg);
   let [name, setName] = useState("");
   let [selectedFile, setSelectedFile] = useState("");
-  
-  let navigate = useNavigate()
+
+  let navigate = useNavigate();
 
   let dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ function AdminEditCategoryPageLogic(id) {
   };
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getSpecificCategory(id));
   }, []);
 
@@ -99,7 +99,7 @@ function AdminEditCategoryPageLogic(id) {
     if (categoryStatus === STATUS.SUCCEEDED) {
       toast.success("تم تعديل التصنيف بنجاح");
       dispatch(reset());
-      navigate("/admin/allCategories")
+      navigate("/admin/allCategories");
     } else if (categoryStatus === STATUS.FAILED) {
       toast.error(categoryError);
       dispatch(reset());

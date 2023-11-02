@@ -13,8 +13,8 @@ function ProductsPageHook() {
   let limit = 10;
   let [page, setPage] = useState(1);
   let dispatch = useDispatch();
-  
-  //Rerender Navbar Logic To Get Search Word 
+
+  //Rerender Navbar Logic To Get Search Word
   let [, , , , , , , , , , , , , ,] = NavbarLogic();
 
   //Get All Products
@@ -39,7 +39,7 @@ function ProductsPageHook() {
   };
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {

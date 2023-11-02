@@ -16,7 +16,7 @@ function AdminAllBrandsLogic() {
 
   let dispatch = useDispatch();
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getAllBrands(10));
   }, []);
 

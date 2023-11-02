@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { getAllCategories } from "../../../../store/ThunkFunctions/CategoriesFunctions";
-import { getAllBrands } from "../../../../store/thunkFunctions/brandsFunctions";
+import { getAllBrands } from "../../../../store/ThunkFunctions/BrandsFunctions";
 import { allCategories } from "../../../../store/CategoriesSlice";
 import { allBrands } from "../../../../store/BrandsSlice";
 import { getAllSubCategories } from "../../../../store/ThunkFunctions/SubCategoriesFunctions";
@@ -42,8 +42,8 @@ function AdminEditCouponLogic() {
   const [showPicker, setShowPicker] = useState(false);
 
   const [colors, setColors] = useState([]);
-  
-  let navigate = useNavigate()
+
+  let navigate = useNavigate();
 
   const onImgsChange = (imageList) => {
     // data for submit
@@ -52,7 +52,7 @@ function AdminEditCouponLogic() {
 
   let dispatch = useDispatch();
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
     dispatch(getAllCategories());
     dispatch(getAllBrands());
   }, []);
@@ -170,7 +170,7 @@ function AdminEditCouponLogic() {
       setBrandId("");
       setColors([]);
       dispatch(reset());
-      navigate("/admin/allProducts")
+      navigate("/admin/allProducts");
     } else if (productStatus === STATUS.FAILED) {
       toast.error(productError.message);
       dispatch(reset());
