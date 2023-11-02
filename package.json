@@ -40,7 +40,8 @@
     "sweetalert2": "^11.9.0",
     "swiper": "^11.0.3",
     "unop-react-dropdown": "^0.2.3",
-    "vercel": "^32.5.0"
+    "vercel": "^32.5.0",
+    "contentful": "^9.1.28",
   },
   "devDependencies": {
     "@types/react": "^18.2.33",
