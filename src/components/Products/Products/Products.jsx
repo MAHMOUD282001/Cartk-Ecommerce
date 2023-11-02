@@ -71,6 +71,7 @@ function Products({
                 background: "#F8F8F8",
                 textAlign: "center",
                 borderRadius: "4px",
+                mt: 3
               }}
             >
               <Typography variant="h5">لا يوجد منتجات</Typography>

@@ -24,7 +24,7 @@ function ProductsPage() {
           <Grid item lg={2} md={3} sm={4}>
             <SideProductsFilter />
           </Grid>
-          <Grid item lg={10} md={9} sm={8}>
+          <Grid item lg={10} md={9} sm={8} sx={{width : "100%", mt: {xs: 3, sm: 0}}}>
             <Products
               isShopProductsPage={true}
               products={products?.data}

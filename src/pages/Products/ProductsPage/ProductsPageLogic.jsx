@@ -31,15 +31,22 @@ function ProductsPageHook() {
       priceToString,
     ] = getFromLocalStorage();
 
+    console.log(
+      `sort=${sort}&limit=${limit}&keyword=${word}&page=${page}&${queryCatString}&${queryBrandString}${priceFromString}${priceToString}`
+    );
+
     await dispatch(
       getAllProductsSearch(
-        `sort=${sort}&limit=${limit}&keyword=${word}&page=${page}&${queryCatString}&${queryBrandString}${priceFromString}${priceToString}`
+        `sort=${sort}&limit=${limit}${
+          word ? `&keyword=${word}` : ""
+        }&page=${page}&${queryCatString}&${queryBrandString}${priceFromString}${priceToString}`
       )
     );
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    getProducts();
   }, []);
 
   useEffect(() => {
